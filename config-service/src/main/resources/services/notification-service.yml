@@ -10,3 +10,8 @@ spring:
     listener:
       direct:
         default-requeue-rejected: true
+  sleuth:
+    propagation:
+      type: w3c,b3
+    traceId128: true
+    supportsJoin: false

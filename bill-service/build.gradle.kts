@@ -14,6 +14,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-hystrix")
     implementation("org.postgresql:postgresql")
+    implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
 }
 tasks.jar {
     manifest {
