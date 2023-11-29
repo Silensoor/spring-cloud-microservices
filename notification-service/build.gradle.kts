@@ -13,6 +13,7 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-hystrix")
+    implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
 
 }
 tasks.jar {

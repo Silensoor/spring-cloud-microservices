@@ -9,6 +9,7 @@ spring:
       username: user
 eureka:
   instance:
+    hostname: localhost
     preferIpAddress: true
   client:
     register-with-eureka: false

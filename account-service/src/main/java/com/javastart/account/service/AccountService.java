@@ -24,7 +24,7 @@ public class AccountService {
 
     public Long createAccount(AccountRq accountRq) {
         Account account = new Account(accountRq.getName(),
-                accountRq.getEmail(), accountRq.getPhone(),
+                 accountRq.getPhone(),accountRq.getEmail(),
                 OffsetDateTime.now(), accountRq.getBills());
         return accountRepository.saveAndFlush(account).getAccountId();
     }

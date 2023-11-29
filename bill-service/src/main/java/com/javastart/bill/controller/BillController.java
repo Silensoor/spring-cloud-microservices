@@ -6,6 +6,8 @@ import com.javastart.bill.service.BillService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class BillController {
@@ -34,5 +36,12 @@ public class BillController {
         return new BillRs(billService.deleteBill(buildId));
     }
 
+    @GetMapping("/account/{accountId}")
+    public List<BillRs> getBillsByAccountId(@PathVariable Long accountId) {
+        return billService.getBillsByAccountId(accountId)
+                .stream()
+                .map(BillRs::new)
+                .toList();
+    }
 
 }

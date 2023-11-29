@@ -16,7 +16,7 @@ spring:
       enabled: false
   rabbitmq:
     port: 5672
-    host: rabbitmq
+    host: localhost
     username: guest
     password: guest
     listener:
@@ -25,5 +25,5 @@ spring:
 
 server:
   servlet:
-    context-path: /deposit
-  port: 8081
+    context-path: /deposits
+  port: 8080

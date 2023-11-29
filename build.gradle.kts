@@ -32,6 +32,7 @@ allprojects {
     val postgres:           String by project
     val sleuth:             String by project
     val hystrix:            String by project
+    val gateway:            String by project
 
     apply(plugin = "io.spring.dependency-management")
 
@@ -43,7 +44,7 @@ allprojects {
                 mavenBom("com.google.protobuf:protobuf-bom:$protobufBom")
                 mavenBom("org.springframework.cloud:spring-cloud-dependencies:$cloud")
             }
-            dependency("org.springframework.cloud:spring-cloud-starter-netflix-zuul:$hystrix")
+            dependency("org.springframework.cloud:spring-cloud-starter-gateway:$gateway")
             dependency("org.springframework.cloud:spring-cloud-starter-sleuth:$sleuth")
             dependency("org.springframework.cloud:spring-cloud-starter-netflix-hystrix:$hystrix")
             dependency("org.postgresql:postgresql:$postgres")
